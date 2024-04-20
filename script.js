@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", function() {
             var line = lines[i];
             var checkbox = document.getElementById("line" + (i + 1));
             if (checkbox && checkbox.checked) {
-                output += "<ul>" + line + "</ul>\n";
+                output += "\n<b>" + line + "<b>";
             } else {
-                output += "<li>" + line + "</li>\n";
+                output += "<br>" + line + "</br>\n";
             }
         }
         outputText.innerHTML = output.trim();
