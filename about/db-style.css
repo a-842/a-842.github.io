@@ -1,1 +1,20 @@
-this will be css
+.item-card {
+    width:80%;
+    height: fit-content;
+    corner-radius:4px;
+    box-shadow:0px 0px 4px #bbbbbb
+    padding: 0px
+}
+
+.item-card img {
+    height: auto;
+    max-width: 100%;
+}
+
+.item-card  {
+    
+}
+
+
+
+
