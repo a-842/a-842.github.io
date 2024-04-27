@@ -43,7 +43,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 output += "\n<br />&amp;bull;" + line;
             }
         }
-        outputText.innerHTML = output.trim();
+        
+        outputText.innerHTML = output.replace("<br /><br />", "").trim();
     }
 
     // Function to remove blank lines
