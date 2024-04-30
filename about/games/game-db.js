@@ -2,9 +2,8 @@
 
 
 document.addEventListener("DOMContentLoaded", function() {
-  // Your JavaScript code here
   	const games = [
-		
+		{title: "Cuphead", img: "cuphead-header.jpeg", type:"video", genre"", playtime:"a moderate amount", rating:"very good" description:"An amazing indie shoot 'em up to relax with and bring a sense of nostalgia from the graphics and soundtrack"},
 
 	];
 
