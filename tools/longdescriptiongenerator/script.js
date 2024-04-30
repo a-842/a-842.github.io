@@ -4,13 +4,14 @@ document.addEventListener("DOMContentLoaded", function() {
     var outputText = document.getElementById("outputText");
     var removeBlankLinesButton = document.getElementById("blanklineremove");
     var copyOutputButton = document.getElementById("copyOutput"); 
+    var clearOutputButtom = document.getElementByID("clearOutput");
 
-    // Function to update checkboxes based on the number of lines
+
     function updateCheckboxes() {
         var lines = inputText.value.split("\n");
         var numLines = lines.length;
 
-        // Remove existing checkboxes
+
         optionsColumn.innerHTML = "";
 
         // Create new checkboxes dynamically
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Function to update output text based on checkbox status
+
     function updateOutputText() {
         var lines = inputText.value.split("\n");
         var output = "";
@@ -47,21 +48,37 @@ document.addEventListener("DOMContentLoaded", function() {
         outputText.innerHTML = output.replace("<br /><br />", "").trim();
     }
 
-    // Function to remove blank lines
+
+    function clearInput() {
+        var lines = inputText.value.split("\n");
+        for (line in lines) {
+            if (line[0] == "&bull;";) {
+                line = line.slice(1).trim()
+                
+            }
+            
+        }
+        inputText.value = lines.join("\n");
+        updateCheckboxes();
+        updateOutputText();
+    }
+
+
+    clearOutputButtom.addEventListener("click", function {clearInput();});
+
+    
     function removeBlankLines() {
         var lines = inputText.value.split("\n");
         lines = lines.filter(line => line.trim() !== ""); 
         inputText.value = lines.join("\n"); 
-        updateCheckboxes(); // Update checkboxes after removing blank lines
+        updateCheckboxes();
         updateOutputText(); 
     }
 
-    // Add event listener to remove blank lines button
-    removeBlankLinesButton.addEventListener("click", function() {
-        removeBlankLines();
-    });
 
-    // Function to copy output text
+    removeBlankLinesButton.addEventListener("click", function() {removeBlankLines();});
+
+
     function copyOutputText() {
         var copyText = document.getElementById("outputText");
         copyText.select();
@@ -70,12 +87,10 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Text Copied")
     }
 
-    // Add event listener to copy output button
-    copyOutputButton.addEventListener("click", function() {
-        copyOutputText();
-    });
 
-    // Add event listener to input text area for any input changes
+    copyOutputButton.addEventListener("click", function() {copyOutputText();});
+
+
     inputText.addEventListener("input", function() {
         updateCheckboxes(); // Update checkboxes whenever input changes
         updateOutputText();
