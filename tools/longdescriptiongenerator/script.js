@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
         updateOutputText();
     }
 
-    removePretextButton.addEventListener("click", function {removePretext();});
+    removePretextButton.addEventListener("click", removePretext);
 
     function clearInput() {
         inputText.value = ""
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    clearOutputButton.addEventListener("click", function {clearInput();});
+    clearOutputButton.addEventListener("click", clearInput);
 
     
     function removeBlankLines() {
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    removeBlankLinesButton.addEventListener("click", function() {removeBlankLines();});
+    removeBlankLinesButton.addEventListener("click", removeBlankLines);
 
 
     function copyOutputText() {
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    copyOutputButton.addEventListener("click", function() {copyOutputText();});
+    copyOutputButton.addEventListener("click", copyOutputText);
 
 
     inputText.addEventListener("input", function() {
