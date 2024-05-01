@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function removePretext() {
         var lines = inputText.value.split("\n");
         for (line in lines) {
-            if (line[0] == "\u2022";) {
+            if (line[0] == "\u2022") {
                 line = line.slice(1).trim()
                 
             }
