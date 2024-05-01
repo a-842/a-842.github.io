@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
         inputText.value = lines.join("\n");
         updateCheckboxes();
         updateOutputText();
-    }
+    });
 
 
     clearOutputButton.addEventListener("click", function clearInput() {
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
         updateCheckboxes();
         updateOutputText(); 
         
-    }
+    });
 
 
     
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
         inputText.value = lines.join("\n"); 
         updateCheckboxes();
         updateOutputText(); 
-    }
+    });
 
 
 
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
         copyText.setSelectionRange(0, 99999); 
         navigator.clipboard.writeText(copyText.value);
         console.log("Text Copied")
-    }
+    });
 
 
 
