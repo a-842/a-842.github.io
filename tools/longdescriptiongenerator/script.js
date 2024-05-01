@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var outputText = document.getElementById("outputText");
     var removeBlankLinesButton = document.getElementById("blanklineremove");
     var copyOutputButton = document.getElementById("copyOutput"); 
+    var removePretextButton = document.getElementById("removePretext")
     var clearOutputButtom = document.getElementByID("clearOutput");
 
 
@@ -49,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    function clearInput() {
+    function removePretext() {
         var lines = inputText.value.split("\n");
         for (line in lines) {
             if (line[0] == "&bull;";) {
@@ -63,8 +64,17 @@ document.addEventListener("DOMContentLoaded", function() {
         updateOutputText();
     }
 
+    removePretextButton.addEventListener("click", function {removePretext();});
 
-    clearOutputButtom.addEventListener("click", function {clearInput();});
+    function clearInput() {
+        inputText.value = ""
+        updateCheckboxes();
+        updateOutputText(); 
+        
+    }
+
+
+    clearOutputButton.addEventListener("click", function {clearInput();});
 
     
     function removeBlankLines() {
