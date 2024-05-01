@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var removeBlankLinesButton = document.getElementById("blanklineremove");
     var copyOutputButton = document.getElementById("copyOutput"); 
     var removePretextButton = document.getElementById("removePretext");
-    var clearOutputButtom = document.getElementByID("clearOutput");
+    var clearOutputButtom = document.getElementById("clearOutput");
 
 
     function updateCheckboxes() {
