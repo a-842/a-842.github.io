@@ -50,7 +50,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    function removePretext() {
+
+
+    removePretextButton.addEventListener("click", function removePretext() {
         var lines = inputText.value.split("\n");
         for (line in lines) {
             if (line[0] == "\u2022") {
@@ -64,9 +66,8 @@ document.addEventListener("DOMContentLoaded", function() {
         updateOutputText();
     }
 
-    removePretextButton.addEventListener("click", removePretext);
 
-    function clearInput() {
+    clearOutputButton.addEventListener("click", function clearInput() {
         inputText.value = ""
         updateCheckboxes();
         updateOutputText(); 
@@ -74,10 +75,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    clearOutputButton.addEventListener("click", clearInput);
-
     
-    function removeBlankLines() {
+    removeBlankLinesButton.addEventListener("click", function removeBlankLines() {
         var lines = inputText.value.split("\n");
         lines = lines.filter(line => line.trim() !== ""); 
         inputText.value = lines.join("\n"); 
@@ -86,10 +85,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    removeBlankLinesButton.addEventListener("click", removeBlankLines);
 
-
-    function copyOutputText() {
+    copyOutputButton.addEventListener("click", function copyOutputText() {
         var copyText = document.getElementById("outputText");
         copyText.select();
         copyText.setSelectionRange(0, 99999); 
@@ -98,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    copyOutputButton.addEventListener("click", copyOutputText);
 
 
     inputText.addEventListener("input", function() {
