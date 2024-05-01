@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var outputText = document.getElementById("outputText");
     var removeBlankLinesButton = document.getElementById("blanklineremove");
     var copyOutputButton = document.getElementById("copyOutput"); 
-    var removePretextButton = document.getElementById("removePretext")
+    var removePretextButton = document.getElementById("removePretext");
     var clearOutputButtom = document.getElementByID("clearOutput");
 
 
