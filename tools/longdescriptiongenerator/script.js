@@ -51,19 +51,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
     removePretextButton.addEventListener("click", function removePretext() {
         var lines = inputText.value.split("\n");
-        for (line in lines) {
-            if (line.startsWith("-")) {
-                line = line.substring(1).trim();
+        for (var i = 0; i < lines.length; i++) {
+            if (lines[i].startsWith("-")) {
+                lines[i] = lines[i].substring(1).trim();
             }
-            
         }
         inputText.value = lines.join("\n");
         updateCheckboxes();
         updateOutputText();
     });
+
 
 
     clearOutputButton.addEventListener("click", function clearInput() {
