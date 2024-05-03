@@ -1,3 +1,9 @@
+if (window.location.search.includes('funky=true')) {
+            var buttonContainer = document.getElementById('buttonrow');
+            buttonrow.innerHTML += '<button class="button-6" id="funky-sort">Sort</button>';
+        }
+
+
 document.addEventListener("DOMContentLoaded", function() {
     var optionsColumn = document.getElementById("optionsColumn");
     var inputText = document.getElementById("inputText");
