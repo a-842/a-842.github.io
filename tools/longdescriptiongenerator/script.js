@@ -1,5 +1,5 @@
 if (window.location.search.includes('funky=true')) {
-            var buttonContainer = document.getElementById('buttonrow');
+            var buttonrow = document.getElementById('buttonrow');
             buttonrow.innerHTML += '<button class="button-6" id="funky-sort">Sort</button>';
         }
 
