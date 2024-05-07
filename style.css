@@ -62,6 +62,10 @@ nav ul li {
 	position: relative;
 }
 
+nav ul li .menu-align-right {
+	margin-left: auto;
+}
+
 nav ul li a {
 	display: block;
 	padding: 20px 25px;
