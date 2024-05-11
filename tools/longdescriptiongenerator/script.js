@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
     removePretextButton.addEventListener("click", function removePretext() {
         var lines = inputText.value.split("\n");
         for (var i = 0; i < lines.length; i++) {
-            if (lines[i].startsWith("-") || lines[i].startsWith("•") || lines[i].startsWith("◦")) {
+            if (lines[i].startsWith("-") || lines[i].startsWith("•") || lines[i].startsWith("◦") || lines[i].startsWith("→")) {
                 lines[i] = lines[i].substring(1).trim();
             }
         }
