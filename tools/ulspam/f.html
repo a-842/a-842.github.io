@@ -1,0 +1,28 @@
+function base64toBytesArray(base64) {
+      return Uint8Array.from(atob(base64), (c) => c.charCodeAt(0));
+}
+
+fetch("https://app.uplearn.co.uk/wistiaToServer.php", {
+  "headers": {
+"content-length": "77",
+"sec-ch-ua": "\"Google Chrome\";v=\"125\", \"Chromium\";v=\"125\", \"Not.A/Brand\";v=\"24\"",
+"accept": "application/json, text/javascript, */*; q=0.01",
+"content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+"x-requested-with": "XMLHttpRequest",
+"sec-ch-ua-mobile": "?0",
+"user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+"sec-ch-ua-platform": "\"macOS\"",
+"origin": "https://app.uplearn.co.uk",
+"sec-fetch-site": "same-origin",
+"sec-fetch-mode": "cors",
+"sec-fetch-dest": "empty",
+"referer": "https://app.uplearn.co.uk/learn/maths-ocr-1/the-science-of-learning-optional/introduction-to-the-science-of-learning-video",
+"accept-encoding": "gzip, deflate, br, zstd",
+"accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+"priority": "u=1, i",
+"cookie": "PHPSESSID=0f667dabc15603a514da75c0c2b2494a; intercom-id-p12er0ht=e6491e36-b2e0-49ce-a2c3-3a5fcc96585d; intercom-device-id-p12er0ht=1c03d6ec-7d20-41ea-8fe2-b32d9aa08c77; auth-token=eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ1cGxlYXJuLmNvLnVrIiwiZXhwIjoxNzE5MTU1NTAwLCJpYXQiOjE3MTY0NzcxMDAsImlzcyI6InVwbGVhcm4uY28udWsiLCJqdGkiOiJiMTQ5ODc1ZS05MjY1LTRjZTYtOTBjNi1lMzc0OGZkYjY5NmIiLCJuYmYiOjE3MTY0NzcwOTksInN1YiI6IjkxMzAwNiIsInR5cCI6ImFjY2VzcyJ9.BKjPgS-DRGQAJFa858Z3p9hBOwgPLJlg1gtRpXfxUwY4pMWTVgxwo5dcPtvvFaRC3n6IR_u_E0DWvM96qoQkJA; _fbp=fb.2.1716477101324.107253871; intercom-session-p12er0ht=KzV1QUZXdTVtSTBJT0lWclk5WGZLdEhTM1l1Ni9Xc29BaU1oTWp3NWZQMFRSUWYyODh5bTJreGxnVWZ3eFBLRS0tOEZjeWtzQnJjSkVsU01uNFYxakFIQT09--395fb0ffbe894a856479ef7e790ecbb805f72abe"
+  },
+  "body": Uint8Array.from(atob("ZW5kZWQ9MSZ1c2VyPTkxMzAwNiZtb2R1bGU9NjQmY3VycmVudExlc3Nvbj0yMzgxMCZ0aW1lb25sZXNzb249OTk5JnBlcmNlbnRXPTE="), (c) => c.charCodeAt(0)),
+  "method": "POST"
+});
+
