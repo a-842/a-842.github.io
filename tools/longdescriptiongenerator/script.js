@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var line = lines[i];
             var checkbox = document.getElementById("line" + (i + 1));
             if (checkbox && checkbox.checked) {
-                output += "\n<br /><br /><b>" + line + "<b>";
+                output += "\n<br /><br /><b>" + line + "</b>";
             } else {
                 output += "\n<br />&amp;bull;" + line;
             }
