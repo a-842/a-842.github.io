@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>a-842's Website</title>
     <link rel="stylesheet" href="style.css">
+	<style>
+    apple-wallet-button {
+        --apple-wallet-button-border-radius: 5px;
+        --apple-wallet-button-height: 40px;
+        --apple-wallet-button-width: 180px;
+        --apple-wallet-button-padding: 0px 0px;
+        --apple-wallet-button-box-sizing: content-box;
+    }
+</style>
 </head>
 <body>
 	<nav>
@@ -41,6 +50,13 @@
 			<h2>This is the homepage</h2>
 			<p>It may take me a while to put things here</p>
 			<img src="cat.jpeg"></img>
+			
+<apple-wallet-button
+    buttonstyle="black"
+    compact="true"
+    locale="en-US"
+    onclick="window.location.href='https://applepaydemo.apple.com/static/order/123456789.order';"
+    />
 		</div>
 	</div>
 
