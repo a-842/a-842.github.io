@@ -1,0 +1,36 @@
+    // Get the current date and time
+        var today = new Date();
+        
+        // Get the day of the week (0-6, where 0 is Sunday and 6 is Saturday)
+        var day = today.getDay();
+        
+        // Array of day names
+        var daylist = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        
+        // Display the current day
+        console.log("Today is: " + daylist[day] + ".");
+        document.getElementById("day").innerHTML = daylist[day];
+        
+        // Get the current hour, minute, and second
+        var hour = today.getHours();
+        var minute = today.getMinutes();
+        var second = today.getSeconds();
+        
+        // Determine if it's AM or PM
+        var prepand = hour >= 12 ? " PM" : " AM";
+        
+        // Convert 24-hour format to 12-hour format
+        if (hour > 12) {
+            hour -= 12;
+        }
+        // Handle edge cases for 12 AM and 12 PM
+        if (hour === 0) {
+            hour = 12;
+        }
+
+        // Display the current time in the console
+        console.log("Current Time: " + hour + prepand + " : " + minute + " : " + second); 
+
+        // Display the time in the HTML
+        document.getElementById("time").innerHTML = hour + prepand + " : " + (minute < 10 ? "0" : "") + minute + " : " + (second < 10 ? "0" : "") + second;
+   
