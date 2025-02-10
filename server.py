@@ -1,12 +1,15 @@
-from flask import Flask, render_template
 
-
+# import flask module
+from flask import Flask
+ 
+# instance of flask application
 app = Flask(__name__)
-
-
-@app.route('/')
-def home():
-    return render_template('home.html')
-
-if __name__ == "__main__":
-    app.run(port=80)
+ 
+# home route that returns below text 
+# when root url is accessed
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+ 
+if __name__ == '__main__':
+    app.run(debug=True, port=8001)
